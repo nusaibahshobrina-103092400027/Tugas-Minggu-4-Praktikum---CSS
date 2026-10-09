@@ -1,0 +1,392 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #fff;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #111, #454545);
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.login-form h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-form > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Background input berubah saat diklik */
+.login-form input:focus {
+    background-color: #fff4d6;
+    border-color: #333;
+    outline: 2px solid #ddd;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Tombol berubah menjadi hitam dengan teks putih */
+.login-form button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(15, 15, 15, 0.96);
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f0a500;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+.home {
+    min-height: 100vh;
+    padding: 120px 7% 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+                        rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1920&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    color: #d99500;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.home h1 {
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home h1 span {
+    color: #f0a500;
+    font-size: 1.15em;
+}
+
+.description {
+    color: #eee;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #f0a500;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.shop-button:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* =========================
+   COLLECTIONS SECTION
+========================= */
+.collections {
+    padding: 90px 7%;
+    background-color: #f7f7f7;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span,
+.about h2 span {
+    color: #d99500;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Empat kartu dalam satu baris */
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.collection-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ukuran gambar disamakan */
+.collection-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+   ABOUT & FOOTER
+========================= */
+.about {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #666;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 22px;
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE: LAYAR KECIL
+========================= */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .home {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .collections {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    /* Maksimal dua kartu per baris */
+    .collection-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .collection-card img {
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 13px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+}
+
+/* Ponsel sangat kecil */
+@media (max-width: 380px) {
+    .navbar {
+        padding: 15px 3%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .collection-container {
+        gap: 10px;
+    }
+
+    .collection-card img {
+        height: 120px;
+    }
+}
